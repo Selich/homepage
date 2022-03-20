@@ -82,13 +82,6 @@ const Duck = () => {
       dirLight.shadow.camera.far = 40
       scene.add(dirLight)
 
-      const mesh = new THREE.Mesh(
-        new THREE.PlaneGeometry(100, 100),
-        new THREE.MeshPhongMaterial({ color: 0x000, depthWrite: false })
-      )
-      mesh.rotation.x = -Math.PI / 2
-      mesh.receiveShadow = true
-      scene.add(mesh)
 
       const controls = new OrbitControls(camera, renderer.domElement)
       controls.autoRotate = true
