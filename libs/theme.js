@@ -5,6 +5,7 @@ import { mode } from '@chakra-ui/theme-tools'
 const styles = {
   global: props => ({
     body: {
+      bgGradient:"linear(to-l, #7928ca76, #ff008065)",
       bg: mode('#f0e7db', '#000003')(props)
     }
   })

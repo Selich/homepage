@@ -16,10 +16,13 @@ import Layout from '../components/layouts/article'
 
 const Page = () => {
   return (
-    <Layout>
-      <Container>
+    <Layout
+    >
+      <Container
+      >
         <Box
           borderRadius="lg"
+          bgGradient="linear(to-l, #7928ca76, #ff008065)"
           bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
           p={3}
           mb={6}
@@ -35,10 +38,15 @@ const Page = () => {
         </Box>
         <Heading
           color="teal"
-          bgGradient="linear(to-l, #7928ca76, #FF0080)"
+          bgGradient={
+            useColorModeValue(
+              "linear(to-l, #7928cae8, #ff0080)",
+              "linear(to-l, #7928ca, #ff0080)"
+            )
+          }
           bgClip="text"
           p={0}
-          fontSize="4xl"
+          fontSize="5xl"
           fontWeight="extrabold"
           as="h2"
           variant="page-title"
@@ -52,17 +60,18 @@ const Page = () => {
           <Box
             flexShrink={0}
             mt={{ base: 4, md: 0 }}
-            ml={{ md: 6 }}
             align="center"
           >
             <Image
-              borderColor="whiteAlpha.800"
               borderWidth={2}
+              zIndex={-100}
+              maxWidth="300p"
+              maxHeight="300px"
+              borderRadius="full"
+              borderColor="linear(to-l, #7928cae8, #ff0080)"
               borderStyle="solid"
-              maxWidth="100px"
               display="inline-block"
-              boarderRadius="full"
-              src=""
+              src="/images/1.png"
               alt="Profile Image"
             />
           </Box>
