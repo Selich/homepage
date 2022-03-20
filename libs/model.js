@@ -13,10 +13,11 @@ export function loadOBJModel(
       glbPath,
       obj => {
         obj.name = 'duck'
-        obj.position.y = 2
+        obj.position.y = 3
         obj.position.x = 0
         obj.receiveShadow = receiveShadow
         obj.castShadow = castShadow
+        
         obj.rotation.x = Math.PI / 2;
         scene.add(obj)
 

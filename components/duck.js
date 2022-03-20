@@ -8,6 +8,8 @@ import { DuckSpinner, DuckContainer } from './duck-loader'
 //   return Math.sqrt(1 - Math.pow(x - 1, 4))
 // }
 
+// add click to dance duck
+
 const Duck = () => {
   const refContainer = useRef()
   const [loading, setLoading] = useState(true)
@@ -15,11 +17,7 @@ const Duck = () => {
   const [_camera, setCamera] = useState()
   const [target] = useState(new THREE.Vector3(-0.5, 1.2, 0))
   const [initialCameraPosition] = useState(
-    new THREE.Vector3(
-      90 * Math.sin(0.2 * Math.PI),
-      20,
-      190
-    )
+    new THREE.Vector3(30 * Math.sin(0.2 * Math.PI), 30, 190)
   )
   const [scene] = useState(new THREE.Scene())
   const [_controls, setControls] = useState()
@@ -53,21 +51,44 @@ const Duck = () => {
 
       // 640 -> 240
       // 8   -> 6
-      const scale = scW * 0.008 + 0.8
+      const scale = scW * 0.01
       const camera = new THREE.OrthographicCamera(
         -scale,
         scale,
         -scale,
         scale,
         1.3,
-        500
+        5000
       )
       camera.position.copy(initialCameraPosition)
       camera.lookAt(target)
       setCamera(camera)
 
-      const ambientLight = new THREE.AmbientLight(0xcccccc, 1)
+      const ambientLight = new THREE.AmbientLight(0x910309, 9.4)
       scene.add(ambientLight)
+      scene.add(camera)
+      const hemiLight = new THREE.HemisphereLight(0xffffff, 0x444444)
+      hemiLight.position.set(0, 20, 0)
+      scene.add(hemiLight)
+
+      const dirLight = new THREE.DirectionalLight(0xffffff)
+      dirLight.position.set(-3, 10, -10)
+      dirLight.castShadow = true
+      dirLight.shadow.camera.top = 2
+      dirLight.shadow.camera.bottom = -2
+      dirLight.shadow.camera.left = -2
+      dirLight.shadow.camera.right = 2
+      dirLight.shadow.camera.near = 0.1
+      dirLight.shadow.camera.far = 40
+      scene.add(dirLight)
+
+      const mesh = new THREE.Mesh(
+        new THREE.PlaneGeometry(100, 100),
+        new THREE.MeshPhongMaterial({ color: 0x000, depthWrite: false })
+      )
+      mesh.rotation.x = -Math.PI / 2
+      mesh.receiveShadow = true
+      scene.add(mesh)
 
       const controls = new OrbitControls(camera, renderer.domElement)
       controls.autoRotate = true
@@ -93,13 +114,10 @@ const Duck = () => {
           // const p = initialCameraPosition
           // const rotSpeed = -easeOutCirc(frame / 120) * Math.PI * 20
 
-          camera.position.x =
-            20
-          camera.position.y = 
-            20
-          camera.position.z =
-            20
-            // p.y * Math.cos(rotSpeed) + p.x * Math.sin(rotSpeed)
+          camera.position.x = 30
+          camera.position.y = 30
+          camera.position.z = 30
+          // p.y * Math.cos(rotSpeed) + p.x * Math.sin(rotSpeed)
           camera.lookAt(target)
         } else {
           controls.update()
@@ -124,7 +142,9 @@ const Duck = () => {
   }, [renderer, handleWindowResize])
 
   return (
-    <DuckContainer ref={refContainer}>{loading && <DuckSpinner />}</DuckContainer>
+    <DuckContainer ref={refContainer}>
+      {loading && <DuckSpinner />}
+    </DuckContainer>
   )
 }
 
