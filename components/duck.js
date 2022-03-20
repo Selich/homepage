@@ -4,9 +4,9 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import { loadOBJModel } from '../libs/model'
 import { DuckSpinner, DuckContainer } from './duck-loader'
 
-function easeOutCirc(x) {
-  return Math.sqrt(1 - Math.pow(x - 1, 4))
-}
+// function easeOutCirc(x) {
+//   return Math.sqrt(1 - Math.pow(x - 1, 4))
+// }
 
 const Duck = () => {
   const refContainer = useRef()
