@@ -64,7 +64,7 @@ const Page = () => {
             large-scale model processing.
           </Paragraph>
           <Box align="center" my={4}>
-            <NextLink href="/works">
+            <NextLink href="/works" passHref>
               <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
                 My portfolio
               </Button>

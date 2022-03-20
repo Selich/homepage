@@ -1,8 +1,7 @@
 import { Container, Heading, SimpleGrid } from '@chakra-ui/react'
-import Section from '../components/section'
-import { WorkGridItem } from '../components/grid-item'
 // import thumb from '../public/image/works/'
 import Layout from '../components/layouts/article'
+import Section from '../components/section'
 
 const Works = () => {
   return (
@@ -22,14 +21,13 @@ const Works = () => {
             </WorkGridItem> */}
           </Section>
           <Section>
-          {/* <WorkGridItem
+            {/* <WorkGridItem
             id="work2"
             title="Work2"
             // thumbnail={thumb}
           >
             Project description
           </WorkGridItem> */}
-
           </Section>
         </SimpleGrid>
       </Container>
