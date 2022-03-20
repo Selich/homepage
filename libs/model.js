@@ -13,7 +13,7 @@ export function loadOBJModel(
       glbPath,
       obj => {
         obj.name = 'duck'
-        obj.position.y = 30
+        obj.position.y = 2
         obj.position.x = 0
         obj.receiveShadow = receiveShadow
         obj.castShadow = castShadow

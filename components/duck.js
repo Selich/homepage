@@ -16,9 +16,9 @@ const Duck = () => {
   const [target] = useState(new THREE.Vector3(-0.5, 1.2, 0))
   const [initialCameraPosition] = useState(
     new THREE.Vector3(
-      1 * Math.sin(0.2 * Math.PI),
-      1,
-      1 * Math.cos(0.2 * Math.PI)
+      90 * Math.sin(0.2 * Math.PI),
+      20,
+      190
     )
   )
   const [scene] = useState(new THREE.Scene())
@@ -53,14 +53,14 @@ const Duck = () => {
 
       // 640 -> 240
       // 8   -> 6
-      const scale = scW * 0.093 + 49.8
+      const scale = scW * 0.008 + 0.8
       const camera = new THREE.OrthographicCamera(
-        scale,
-        -scale,
         -scale,
         scale,
-        0.3,
-        5000
+        -scale,
+        scale,
+        1.3,
+        500
       )
       camera.position.copy(initialCameraPosition)
       camera.lookAt(target)
@@ -89,16 +89,16 @@ const Duck = () => {
 
         frame = frame <= 100 ? frame + 1 : frame
 
-        if (frame <= 100) {
-          const p = initialCameraPosition
-          const rotSpeed = -easeOutCirc(frame / 120) * Math.PI * 20
+        if (frame <= 0) {
+          // const p = initialCameraPosition
+          // const rotSpeed = -easeOutCirc(frame / 120) * Math.PI * 20
 
           camera.position.x =
-            p.x * Math.cos(rotSpeed) - p.y * Math.sin(rotSpeed)
+            20
           camera.position.y = 
             20
           camera.position.z =
-            2000
+            20
             // p.y * Math.cos(rotSpeed) + p.x * Math.sin(rotSpeed)
           camera.lookAt(target)
         } else {
