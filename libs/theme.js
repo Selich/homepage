@@ -8,7 +8,7 @@ const styles = {
       bgGradient:
         mode(
           "linear(to-l, #7928ca36, #ff008035)",
-          "linear(to-l, #7928ca56, #ff008035)"
+          "linear(to-l, #7928ca56, #ff008055)"
         )(props)
     }
   })
