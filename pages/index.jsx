@@ -64,9 +64,8 @@ const Page = () => {
           >
             <Image
               borderWidth={2}
-              zIndex={-100}
-              maxWidth="300p"
-              maxHeight="300px"
+              maxWidth="200px"
+              maxHeight="200px"
               borderRadius="full"
               borderColor="linear(to-l, #7928cae8, #ff0080)"
               borderStyle="solid"
@@ -82,6 +81,7 @@ const Page = () => {
             as="h3"
             variant="section-title"
             bgGradient="linear(to-l, #7928ca4e, #FF0080)"
+            bgClip="text"
             fontWeight="extrabold"
           >
             About me
@@ -115,6 +115,7 @@ const Page = () => {
         <Section delay={0.2}>
           <Heading
             bgGradient="linear(to-l, #7928ca4e, #FF0080)"
+            bgClip="text"
             fontWeight="extrabold"
             as="h3"
             variant="section-title"
