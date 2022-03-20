@@ -1,3 +1,4 @@
+/* eslint-disable react/display-name */
 import { forwardRef } from 'react'
 import { Box, Spinner } from '@chakra-ui/react'
 
