@@ -53,14 +53,14 @@ const Duck = () => {
 
       // 640 -> 240
       // 8   -> 6
-      const scale = scW * 0.093 + 49.8
+      const scale = scW * 0.093 + 89.8
       const camera = new THREE.OrthographicCamera(
         scale,
         -scale,
         -scale,
         scale,
-        0.3,
-        5000
+        0.1,
+        500
       )
       camera.position.copy(initialCameraPosition)
       camera.lookAt(target)
@@ -94,11 +94,12 @@ const Duck = () => {
           const rotSpeed = -easeOutCirc(frame / 120) * Math.PI * 20
 
           camera.position.x =
-            p.x * Math.cos(rotSpeed) - p.y * Math.sin(rotSpeed)
+            200
           camera.position.y = 
-            20
+            0
+            // p.x * Math.cos(rotSpeed) - p.y * Math.sin(rotSpeed)
           camera.position.z =
-            2000
+            100
             // p.y * Math.cos(rotSpeed) + p.x * Math.sin(rotSpeed)
           camera.lookAt(target)
         } else {
