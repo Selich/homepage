@@ -63,12 +63,14 @@ const Page = () => {
             align="center"
           >
             <Image
-              borderWidth={2}
-              maxWidth="200px"
-              maxHeight="200px"
-              borderRadius="full"
+            style={{filter: 'opacity(80%) grayscale(60%)'}}
+              top={0}
+              maxWidth="590px"
+              maxHeight="340px"
               borderColor="linear(to-l, #7928cae8, #ff0080)"
-              borderStyle="solid"
+              borderWidth={2}
+              zIndex={-100}
+              objectFit='cover'
               display="inline-block"
               src="/images/1.png"
               alt="Profile Image"

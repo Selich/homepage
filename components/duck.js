@@ -71,7 +71,7 @@ const Duck = () => {
       hemiLight.position.set(0, 20, 0)
       scene.add(hemiLight)
 
-      const dirLight = new THREE.DirectionalLight(0xffffff)
+      const dirLight = new THREE.DirectionalLight(0xf222ff)
       dirLight.position.set(-3, 10, -10)
       dirLight.castShadow = true
       dirLight.shadow.camera.top = 2
