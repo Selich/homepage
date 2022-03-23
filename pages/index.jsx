@@ -24,8 +24,8 @@ const Page = () => {
           borderRadius="lg"
           bgGradient="linear(to-l, #7928ca76, #ff008065)"
           bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
-          p={3}
-          mb={6}
+          p={2}
+          mb={8}
           align="center"
         >
           <Text
@@ -46,16 +46,16 @@ const Page = () => {
           }
           bgClip="text"
           p={0}
-          fontSize="5xl"
+          fontSize="3xl"
           fontWeight="extrabold"
           as="h2"
           variant="page-title"
         >
           {useColorModeValue('Nikola Selic', 'Nikola Selic')}
         </Heading>
-        <Box display={{ md: 'flex' }}>
-          <Box flexGrow={1}>
-            <p>Web Developer and Machine Learning Engineer</p>
+    <Box display={{ md: 'flex' }} >
+          <Box flexGrow={1} fontSize="2xl">
+            Full-stack Web Developer
           </Box>
           <Box
             flexShrink={0}
@@ -72,7 +72,7 @@ const Page = () => {
               zIndex={-100}
               objectFit='cover'
               display="inline-block"
-              src="/images/1.png"
+              src="/images/2.png"
               alt="Profile Image"
             />
           </Box>
