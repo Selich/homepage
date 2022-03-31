@@ -29,8 +29,8 @@ const Page = () => {
           align="center"
         >
           <Text
-            bgGradient="linear(to-l, #7928CA, #FF0080)"
-            bgClip="text"
+            // bgGradient="linear(to-l, #7928CA, #FF0080)"
+            // bgClip="text"
             fontWeight="extrabold"
           >
             Hello, I&apos;m a full-stack developer based in Germany!
@@ -40,15 +40,15 @@ const Page = () => {
           color="teal"
           bgGradient={
             useColorModeValue(
-              "linear(to-l, #7928cae8, #ff0080)",
+              "radial-gradient(circle, #5c0067 0%, #ff008055 40%, #000 100%);",
               "linear(to-l, #7928ca, #ff0080)"
             )
           }
           bgClip="text"
           p={0}
-          fontSize="3xl"
+          fontSize="54"
           fontWeight="extrabold"
-          as="h2"
+          as="h1"
           variant="page-title"
         >
           {useColorModeValue('Nikola Selic', 'Nikola Selic')}
@@ -77,6 +77,7 @@ const Page = () => {
             />
           </Box>
         </Box>
+        <hr/>
 
         <Section delay={0.1}>
           <Heading
@@ -125,13 +126,28 @@ const Page = () => {
             Work
           </Heading>
           <BioSection>
-            <BioYear>Amazon</BioYear>
+            <BioYear>KITRO</BioYear>
           </BioSection>
           <BioSection>
                 Lorem ipsum dolor sit amet, consectetur adipiscing
           </BioSection>
+          <br/>
           <BioSection>
             <BioYear>IdeaCompiler</BioYear>
+          </BioSection>
+          <BioSection>
+            University of Munich
+          </BioSection>
+          <br/>
+          <BioSection>
+            <BioYear>LambdaWorks</BioYear>
+          </BioSection>
+          <BioSection>
+            University of Munich
+          </BioSection>
+          <br/>
+          <BioSection>
+            <BioYear>Typhoon HIL</BioYear>
           </BioSection>
           <BioSection>
             University of Munich

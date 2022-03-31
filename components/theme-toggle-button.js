@@ -19,7 +19,11 @@ const ThemeToggleButton = () => {
 
     <IconButton
       aria-label="Toggle theme"
-      colorScheme={useColorModeValue('purple', 'orange')}
+          colorScheme={useColorModeValue(
+            'radial-gradient(circle, #5c0067 0%, #7928ca76 10%, #000 100%);',
+            'radial-gradient(circle, #FF6CFF 0%, #FF6CFF 100%);'
+          )
+          }
       icon={useColorModeValue(<MoonIcon/>, <SunIcon/>) }
       onClick={toggleColorMode}
     />
