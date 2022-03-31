@@ -12,22 +12,13 @@ const Works = () => {
         </Heading>
         <SimpleGrid columns={[1, 1, 2]} gap={6}>
           <Section>
-            {/* <WorkGridItem
-              id="work1"
-              title="Work1"
-              // thumbnail={thumb}
-            >
-              Project description
-            </WorkGridItem> */}
+            Test
           </Section>
           <Section>
-            {/* <WorkGridItem
-            id="work2"
-            title="Work2"
-            // thumbnail={thumb}
-          >
-            Project description
-          </WorkGridItem> */}
+            Test
+          </Section>
+          <Section>
+            Test
           </Section>
         </SimpleGrid>
       </Container>
