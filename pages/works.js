@@ -1,7 +1,8 @@
+import React, {useState, useEffect} from 'react'
 import { Container, Heading, SimpleGrid } from '@chakra-ui/react'
 // import thumb from '../public/image/works/'
 import Layout from '../components/layouts/article'
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 import { chakra, shouldForwardProp } from '@chakra-ui/react'
 
 const StyledDiv = chakra(motion.div, {
@@ -9,7 +10,14 @@ const StyledDiv = chakra(motion.div, {
     return shouldForwardProp(prop) || prop === 'transition'
   }
 })
+
+const items = [{ id: 0 }, { id: 1 }, { id: 2 }]
 const Works = () => {
+  const [item, setItem] = useState(null)
+
+  useEffect(() => {
+
+  }, [item])
   return (
     <Layout>
       <Container>
@@ -17,40 +25,45 @@ const Works = () => {
           Works
         </Heading>
         <SimpleGrid columns={[1, 1, 2]} gap={6}>
-          <Section>
-            Test
-          </Section>
-          <Section>
-            Test
-          </Section>
-          <Section>
-            Test
-          </Section>
+          {items.map(item => (
+            <Section item={item} setItem={setItem}>{item.id}</Section>
+          ))}
         </SimpleGrid>
       </Container>
+      <AnimatePresence>
+    {item && (
+      <motion.div layoutId={item.id}>
+      <motion.h5>test</motion.h5>
+      <motion.button onClick={() => setItem(null)} />
+    </motion.div>
+
+    )}
+    </AnimatePresence>
     </Layout>
   )
 }
-const Section = ({ children, delay = 0 }) => (
+const Section = ({ item, setItem, children, delay = 0 }) => (
   <StyledDiv
+  onClick={() => setItem(item.id)}
     initial={{ opacity: 0, y: 10 }}
     animate={{ y: 0, opacity: 1 }}
-    transition={{ duration: 0.8, delay }}
+    transition={{ duration: 0.2, delay }}
     cursor={'pointer'}
     mb={6}
     backdropBlur={10}
-    backgroundColor={'#7928ca36'}
+    backgroundColor={'white'}
     height={300}
     borderRadius={20}
     boxShadow="0 1rem 1rem rgb(0 0 0 / 20%)"
+    whileHover={{ scale: 1.1 }}
+    whileTap={{ scale: 0.9 }}
   >
     <Container
       style={{
-        backgroundColor: 'white',
-        marginTop: "70%",
-        height: "110px",
-        borderBottomLeftRadius: "10px",
-        borderBottomRightRadius: "10px",
+        backgroundColor: '#7928ca36',
+        height: '210px',
+        borderTopLeftRadius: '10px',
+        borderTopRightRadius: '10px'
       }}
     >
       {children}
