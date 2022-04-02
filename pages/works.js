@@ -26,7 +26,9 @@ const Works = () => {
         </Heading>
         <SimpleGrid columns={[1, 1, 2]} gap={6}>
           {items.map(item => (
-            <Section item={item} setItem={setItem}>{item.id}</Section>
+            <Section item={item} setItem={setItem}>
+              {item.id}
+            </Section>
           ))}
         </SimpleGrid>
       </Container>
