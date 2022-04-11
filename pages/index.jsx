@@ -173,6 +173,26 @@ const Page = () => {
           </BioSection>
           <BioSection>University of Munich</BioSection>
         </Section>
+        <Section delay={0.2}>
+          <Heading
+            bgGradient="linear(to-l, #7928ca4e, #FF0080)"
+            bgClip="text"
+            fontWeight="extrabold"
+            as="h3"
+            variant="section-title"
+          >
+            Education
+          </Heading>
+          <BioSection>
+            <BioYear>Technical University of Munich</BioYear>
+          </BioSection>
+          <BioSection>University of Munich</BioSection>
+          <BioSection>
+            <BioYear>University of Novi Sad</BioYear>
+          </BioSection>
+          <BioSection>University of Munich</BioSection>
+          <br />
+    </Section>
       </Container>
     </Layout>
   )
