@@ -16,10 +16,8 @@ import Layout from '../components/layouts/article'
 
 const Page = () => {
   return (
-    <Layout
-    >
-      <Container
-      >
+    <Layout>
+      <Container>
         <Box
           borderRadius="lg"
           bgGradient="linear(to-l, #7928ca76, #ff008065)"
@@ -38,12 +36,10 @@ const Page = () => {
         </Box>
         <Heading
           color="teal"
-          bgGradient={
-            useColorModeValue(
-              "radial-gradient(circle, #5c0067 0%, #ff008055 40%, #000 100%);",
-              "linear(to-l, #7928ca, #ff0080)"
-            )
-          }
+          bgGradient={useColorModeValue(
+            'radial-gradient(circle, #5c0067 0%, #ff008055 40%, #000 100%);',
+            'linear(to-l, #7928ca, #ff0080)'
+          )}
           bgClip="text"
           p={0}
           fontSize="54"
@@ -53,31 +49,27 @@ const Page = () => {
         >
           {useColorModeValue('Nikola Selic', 'Nikola Selic')}
         </Heading>
-    <Box display={{ md: 'flex' }} >
+        <Box display={{ md: 'flex' }}>
           <Box flexGrow={1} fontSize="2xl">
             Full-stack Web Developer
           </Box>
-          <Box
-            flexShrink={0}
-            mt={{ base: 4, md: 0 }}
-            align="center"
-          >
+          <Box flexShrink={0} mt={{ base: 4, md: 0 }} align="center">
             <Image
-            style={{filter: 'opacity(80%) grayscale(60%)'}}
+              style={{ filter: 'opacity(80%) grayscale(60%)' }}
               top={0}
               maxWidth="590px"
               maxHeight="340px"
               borderColor="linear(to-l, #7928cae8, #ff0080)"
               borderWidth={2}
               zIndex={-100}
-              objectFit='cover'
+              objectFit="cover"
               display="inline-block"
               src="/images/2.png"
               alt="Profile Image"
             />
           </Box>
         </Box>
-        <hr/>
+        <hr />
 
         <Section delay={0.1}>
           <Heading
@@ -129,29 +121,57 @@ const Page = () => {
             <BioYear>KITRO</BioYear>
           </BioSection>
           <BioSection>
-                Lorem ipsum dolor sit amet, consectetur adipiscing
+            {' '}
+            {` • Full‐stack developer in a smart waste management startup. `}{' '}
           </BioSection>
-          <br/>
+          <BioSection>
+            {' '}
+            {` • Developed an app for the smart weighing device that is used by thousands of customers. `}{' '}
+          </BioSection>
+          <BioSection>
+            {' '}
+            {` • Used Serverless architecture hosted on AWS and written in Python. `}{' '}
+          </BioSection>
+          <BioSection>
+            {' '}
+            {` • Involved in UI/UX design of the web and mobile app and its implementation using React.
+      `}{' '}
+          </BioSection>
+
+          <br />
           <BioSection>
             <BioYear>IdeaCompiler</BioYear>
           </BioSection>
           <BioSection>
-            University of Munich
+            {' '}
+            {` • Research and documentation of Serverless architecture`}{' '}
           </BioSection>
-          <br/>
+          <BioSection>
+            {' '}
+            {` • Learning the basics of functional programming using Haskell programming language`}{' '}
+          </BioSection>
+          <BioSection>
+            {' '}
+            {` • Implementation of a Slack bot application in Haskell programming language using Serverless framework`}{' '}
+          </BioSection>
+          <BioSection>
+            {' '}
+            {` • Handling the hosting of application on AWS Cloud Computing service`}{' '}
+          </BioSection>
+          <BioSection>
+            {' '}
+            {` • Configuring AWS X-Ray tool for tracing and analyzing Serverless applications.`}{' '}
+          </BioSection>
+          <br />
           <BioSection>
             <BioYear>LambdaWorks</BioYear>
           </BioSection>
-          <BioSection>
-            University of Munich
-          </BioSection>
-          <br/>
+          <BioSection>University of Munich</BioSection>
+          <br />
           <BioSection>
             <BioYear>Typhoon HIL</BioYear>
           </BioSection>
-          <BioSection>
-            University of Munich
-          </BioSection>
+          <BioSection>University of Munich</BioSection>
         </Section>
       </Container>
     </Layout>

@@ -1,5 +1,5 @@
-import React, {useState, useEffect} from 'react'
-import { Container, Heading, SimpleGrid } from '@chakra-ui/react'
+import React, { useState, useEffect } from 'react'
+import { Container, Button, Heading, SimpleGrid } from '@chakra-ui/react'
 // import thumb from '../public/image/works/'
 import Layout from '../components/layouts/article'
 import { motion, AnimatePresence } from 'framer-motion'
@@ -13,11 +13,12 @@ const StyledDiv = chakra(motion.div, {
 
 const items = [{ id: 0 }, { id: 1 }, { id: 2 }]
 const Works = () => {
-  const [item, setItem] = useState(null)
+  const [selectedItem, setSelectedItem] = useState(null)
 
   useEffect(() => {
+    console.log(selectedItem)
 
-  }, [item])
+  }, [selectedItem])
   return (
     <Layout>
       <Container>
@@ -26,34 +27,77 @@ const Works = () => {
         </Heading>
         <SimpleGrid columns={[1, 1, 2]} gap={6}>
           {items.map(item => (
-            <Section item={item} setItem={setItem} key={item.id}>
+            <Section item={item} setSelectedItem={setSelectedItem} key={item.id}>
               {item.id}
             </Section>
           ))}
         </SimpleGrid>
+        <AnimatePresence>
+          {selectedItem && (
+        <SimpleGrid columns={[1, 1, 2]} gap={6}>
+            <SectionMain selectedItem={selectedItem} setSelectedItem={setSelectedItem}  layoutId={selectedItem.id}>
+              <motion.h5>test</motion.h5>
+              <Button onClick={() => setItem(null)} />
+            </SectionMain>
+        </SimpleGrid>
+          )}
+        </AnimatePresence>
       </Container>
-      <AnimatePresence>
-    {item && (
-      <motion.div layoutId={item.id}>
-      <motion.h5>test</motion.h5>
-      <motion.button onClick={() => setItem(null)} />
-    </motion.div>
-
-    )}
-    </AnimatePresence>
     </Layout>
   )
 }
-const Section = ({ item, setItem, children, delay = 0 }) => (
+const SectionMain = ({ selectedItem, setSelectedItem, children, delay = 0 }) => 
+{
+  useEffect(() => {},[selectedItem])
+  return (
   <StyledDiv
-  onClick={() => setItem(item.id)}
+    onClick={() => setSelectedItem(undefined)}
+    initial={{ opacity: 0, y: 10 }}
+    animate={{ y: 0, opacity: 1 }}
+  pos={'absolute'}
+  width={580}
+  marginRight={'20%'}
+  top={0}
+    transition={{ duration: 0.2, delay }}
+    cursor={'pointer'}
+    backdropBlur={10}
+    backgroundColor={'white'}
+    height={400}
+    borderRadius={20}
+    boxShadow="0 1rem 1rem rgb(0 0 0 / 20%)"
+    whileHover={{ scale: 1.1 }}
+    whileTap={{ scale: 0.9 }}
+  >
+    <Container
+      style={{
+        backgroundColor: '#7928ca36',
+        height: '310px',
+        borderTopLeftRadius: '10px',
+        borderTopRightRadius: '10px'
+      }}
+    >
+      {children}
+    </Container>
+  </StyledDiv>
+)
+}
+const Section = ({ selectedItem, item, setSelectedItem, children, delay = 0 }) => {
+
+  useEffect(() => {
+    console.log(selectedItem)
+
+  },[selectedItem])
+  return (
+
+  <StyledDiv
+    onClick={() => setSelectedItem(item.id)}
     initial={{ opacity: 0, y: 10 }}
     animate={{ y: 0, opacity: 1 }}
     transition={{ duration: 0.2, delay }}
     cursor={'pointer'}
     mb={6}
-    backdropBlur={10}
-    backgroundColor={'white'}
+    backdropBlur={(selectedItem !== undefined) ? 40: 10}
+    backgroundColor={(selectedItem !== undefined) ? 'gray' : 'white'}
     height={300}
     borderRadius={20}
     boxShadow="0 1rem 1rem rgb(0 0 0 / 20%)"
@@ -72,5 +116,6 @@ const Section = ({ item, setItem, children, delay = 0 }) => (
     </Container>
   </StyledDiv>
 )
+}
 
 export default Works
