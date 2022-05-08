@@ -31,7 +31,7 @@ const Page = () => {
             // bgClip="text"
             fontWeight="extrabold"
           >
-            Hello, I&apos;m a full-stack developer based in Germany!
+            Hello, I&apos;m a full-stack developer based in Germany! Helping businesses create a accessibile and scalable websites.
           </Text>
         </Box>
         <Heading
