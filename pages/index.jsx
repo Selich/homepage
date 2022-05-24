@@ -23,7 +23,7 @@ const Page = () => {
           bgGradient="linear(to-l, #7928ca76, #ff008065)"
           bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
           p={2}
-          mb={8}
+          mb={2}
           align="center"
         >
           <Text
@@ -31,7 +31,8 @@ const Page = () => {
             // bgClip="text"
             fontWeight="extrabold"
           >
-            Hello, I&apos;m a full-stack developer based in Germany! Helping businesses create a accessibile and scalable websites.
+            Hello, I&apos;m a full-stack developer based in Germany! Helping
+            businesses create a accessibile and scalable websites.
           </Text>
         </Box>
         <Heading
@@ -117,6 +118,29 @@ const Page = () => {
           >
             Work
           </Heading>
+
+          <BioSection>
+            <BioYear>Twinu</BioYear>
+          </BioSection>
+          <BioSection>
+            {' '}
+            {` • Full‐stack developer in a smart waste management startup. `}{' '}
+          </BioSection>
+          <BioSection>
+            {' '}
+            {` • Developed an app for the smart weighing device that is used by thousands of customers. `}{' '}
+          </BioSection>
+          <BioSection>
+            {' '}
+            {` • Used Serverless architecture hosted on AWS and written in Python. `}{' '}
+          </BioSection>
+          <BioSection>
+            {' '}
+            {` • Involved in UI/UX design of the web and mobile app and its implementation using React.
+      `}{' '}
+          </BioSection>
+          <br />
+
           <BioSection>
             <BioYear>KITRO</BioYear>
           </BioSection>
@@ -137,8 +161,9 @@ const Page = () => {
             {` • Involved in UI/UX design of the web and mobile app and its implementation using React.
       `}{' '}
           </BioSection>
-
           <br />
+
+
           <BioSection>
             <BioYear>IdeaCompiler</BioYear>
           </BioSection>
@@ -173,6 +198,7 @@ const Page = () => {
           </BioSection>
           <BioSection>University of Munich</BioSection>
         </Section>
+
         <Section delay={0.2}>
           <Heading
             bgGradient="linear(to-l, #7928ca4e, #FF0080)"
@@ -180,19 +206,23 @@ const Page = () => {
             fontWeight="extrabold"
             as="h3"
             variant="section-title"
-          >
-            Education
-          </Heading>
+          > Education </Heading>
+
           <BioSection>
             <BioYear>Technical University of Munich</BioYear>
           </BioSection>
-          <BioSection>University of Munich</BioSection>
+          <BioSection>- Machine Learning and AI</BioSection>
+          <BioSection>- Blockchain and Distributed Systems</BioSection>
+          <BioSection>- Application Security and Cryptography</BioSection>
+          <br />
+
           <BioSection>
             <BioYear>University of Novi Sad</BioYear>
           </BioSection>
           <BioSection>University of Munich</BioSection>
           <br />
-    </Section>
+
+        </Section>
       </Container>
     </Layout>
   )
