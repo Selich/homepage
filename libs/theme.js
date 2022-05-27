@@ -8,7 +8,7 @@ const styles = {
       bgGradient:
         mode(
           "linear(to-l, #7928ca36, #ff008035)",
-          "radial-gradient(circle, #5c0067 0%, #ff008055 40%, #000 100%);",
+          "#000000",
         )(props)
     }
   })

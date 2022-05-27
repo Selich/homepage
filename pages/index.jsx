@@ -20,7 +20,6 @@ const Page = () => {
       <Container>
         <Box
           borderRadius="lg"
-          bgGradient="linear(to-l, #7928ca76, #ff008065)"
           bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
           p={2}
           mb={2}
@@ -35,8 +34,8 @@ const Page = () => {
             businesses create a accessibile and scalable websites.
           </Text>
         </Box>
+
         <Heading
-          color="teal"
           bgGradient={useColorModeValue(
             'radial-gradient(circle, #5c0067 0%, #ff008055 40%, #000 100%);',
             'linear(to-l, #7928ca, #ff0080)'
@@ -70,7 +69,6 @@ const Page = () => {
             />
           </Box>
         </Box>
-        <hr />
 
         <Section delay={0.1}>
           <Heading
@@ -109,119 +107,6 @@ const Page = () => {
         </Section>
 
         <Section delay={0.2}>
-          <Heading
-            bgGradient="linear(to-l, #7928ca4e, #FF0080)"
-            bgClip="text"
-            fontWeight="extrabold"
-            as="h3"
-            variant="section-title"
-          >
-            Work
-          </Heading>
-
-          <BioSection>
-            <BioYear>Twinu</BioYear>
-          </BioSection>
-          <BioSection>
-            {' '}
-            {` • Full‐stack developer in a smart waste management startup. `}{' '}
-          </BioSection>
-          <BioSection>
-            {' '}
-            {` • Developed an app for the smart weighing device that is used by thousands of customers. `}{' '}
-          </BioSection>
-          <BioSection>
-            {' '}
-            {` • Used Serverless architecture hosted on AWS and written in Python. `}{' '}
-          </BioSection>
-          <BioSection>
-            {' '}
-            {` • Involved in UI/UX design of the web and mobile app and its implementation using React.
-      `}{' '}
-          </BioSection>
-          <br />
-
-          <BioSection>
-            <BioYear>KITRO</BioYear>
-          </BioSection>
-          <BioSection>
-            {' '}
-            {` • Full‐stack developer in a smart waste management startup. `}{' '}
-          </BioSection>
-          <BioSection>
-            {' '}
-            {` • Developed an app for the smart weighing device that is used by thousands of customers. `}{' '}
-          </BioSection>
-          <BioSection>
-            {' '}
-            {` • Used Serverless architecture hosted on AWS and written in Python. `}{' '}
-          </BioSection>
-          <BioSection>
-            {' '}
-            {` • Involved in UI/UX design of the web and mobile app and its implementation using React.
-      `}{' '}
-          </BioSection>
-          <br />
-
-
-          <BioSection>
-            <BioYear>IdeaCompiler</BioYear>
-          </BioSection>
-          <BioSection>
-            {' '}
-            {` • Research and documentation of Serverless architecture`}{' '}
-          </BioSection>
-          <BioSection>
-            {' '}
-            {` • Learning the basics of functional programming using Haskell programming language`}{' '}
-          </BioSection>
-          <BioSection>
-            {' '}
-            {` • Implementation of a Slack bot application in Haskell programming language using Serverless framework`}{' '}
-          </BioSection>
-          <BioSection>
-            {' '}
-            {` • Handling the hosting of application on AWS Cloud Computing service`}{' '}
-          </BioSection>
-          <BioSection>
-            {' '}
-            {` • Configuring AWS X-Ray tool for tracing and analyzing Serverless applications.`}{' '}
-          </BioSection>
-          <br />
-          <BioSection>
-            <BioYear>LambdaWorks</BioYear>
-          </BioSection>
-          <BioSection>University of Munich</BioSection>
-          <br />
-          <BioSection>
-            <BioYear>Typhoon HIL</BioYear>
-          </BioSection>
-          <BioSection>University of Munich</BioSection>
-        </Section>
-
-        <Section delay={0.2}>
-          <Heading
-            bgGradient="linear(to-l, #7928ca4e, #FF0080)"
-            bgClip="text"
-            fontWeight="extrabold"
-            as="h3"
-            variant="section-title"
-          > Education </Heading>
-
-          <BioSection>
-            <BioYear>Technical University of Munich</BioYear>
-          </BioSection>
-          <BioSection>- Machine Learning and AI</BioSection>
-          <BioSection>- Blockchain and Distributed Systems</BioSection>
-          <BioSection>- Application Security and Cryptography</BioSection>
-          <br />
-
-          <BioSection>
-            <BioYear>University of Novi Sad</BioYear>
-          </BioSection>
-          <BioSection>University of Munich</BioSection>
-          <br />
-
         </Section>
       </Container>
     </Layout>

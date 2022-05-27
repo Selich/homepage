@@ -45,7 +45,7 @@ const Navbar = props => {
       position="fixed"
       as="nav"
       w="100%"
-      bg={useColorModeValue('#ffffff10', '#20202310')}
+      bg={useColorModeValue('#ffffff90', '#10101390')}
       style={{ backpropFilter: 'blur(30px)' }}
       zIndex={1}
       {...props}
@@ -80,7 +80,6 @@ const Navbar = props => {
         </Stack>
 
         <Box flex={1} align="right">
-          <ThemeToggleButton/>
           <Box ml={2} display={{base: 'inline-block', md:'none' }}>
             <Menu>
               <MenuButton as={IconButton} icon={<HamburgerIcon/>} variant="outline" aria-label="Option"/>

@@ -29,9 +29,7 @@ const Main = ({ children, router }) => {
         <title>Nikola Selic - Homepage</title>
       </Head>
       <Navbar path={router.asPath} />
-      <Container maxW="container.jd"  pt={12} >
-        <LazyDuck />
-
+    <Container maxW="container.jd"  pt={102} >
         {children}
       </Container>
     </Box>
