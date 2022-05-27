@@ -1,13 +1,13 @@
 import Head from 'next/head'
-import dynamic from 'next/dynamic'
+// import dynamic from 'next/dynamic'
 import { Box, Container } from '@chakra-ui/react'
 import Navbar from '../navbar.js'
-import DuckLoader from '../duck-loader'
+// import DuckLoader from '../duck-loader'
 
-const LazyDuck = dynamic(() => import('../duck'), {
-  ssr: false,
-  loading: () => <DuckLoader />
-})
+// const LazyDuck = dynamic(() => import('../duck'), {
+//   ssr: false,
+//   loading: () => <DuckLoader />
+// })
 
 const Main = ({ children, router }) => {
   return (

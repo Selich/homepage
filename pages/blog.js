@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Layout from '../components/layouts/article'
-import { Container, Button, Heading, SimpleGrid } from '@chakra-ui/react'
+import { Container, Heading } from '@chakra-ui/react'
 
 const Blog = () => {
   return (
