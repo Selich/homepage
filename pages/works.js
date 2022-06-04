@@ -16,13 +16,6 @@ const Works = () => {
   const [selectedItem, setSelectedItem] = useState(null);
   const [user, setUser] = useState(null);
 
-  useEffect(() => {
-    fetch(`https://api.github.com/users/Selich`)
-      .then(response => {
-        console.log(response.json())
-        setUser(response.json())
-      })
-  }, [])
 
   useEffect(() => {
     console.log(selectedItem)
