@@ -1,7 +1,13 @@
 import React from 'react'
+import {
+  useColorModeValue,
+  Container,
+  Box,
+  Text,
+  Heading
+} from '@chakra-ui/react'
 
 import Layout from '../components/layouts/article'
-import { Container, Heading } from '@chakra-ui/react'
 import { getSortedPostsData } from '../libs/posts'
 import { Typer } from '../components/typing'
 import Link from "next/link";
@@ -34,19 +40,29 @@ const Blog = ({allPostsData}) => {
       />
         </Heading>
 
-        <ul>
           {allPostsData.map(({ id, date, title }, index) => (
-            <li key={index}>
+        <Box
+          borderRadius="lg"
+          bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
+          p={2}
+          mb={2}
+          align="left"
+          key={index}
+        >
               <Link href={`/posts/${id}`}>
-                <a>{title}</a>
+          <Text
+            // bgGradient="linear(to-l, #7928CA, #FF0080)"
+            // bgClip="text"
+            fontWeight="extrabold"
+          >
+            {title}
+          </Text>
               </Link>
-              <br />
               <span>
                 {date}
               </span>
-            </li>
+        </Box>
           ))}
-        </ul>
       </Container>
     </Layout>
   )
