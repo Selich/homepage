@@ -185,5 +185,5 @@ if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   });
 }
 
-  return <canvas class="orb-canvas"></canvas>
+  return <canvas className="orb-canvas"></canvas>
 }
