@@ -1,7 +1,6 @@
 import {
   useColorModeValue,
   Button,
-  Image,
   Container,
   Box,
   Text,
@@ -53,19 +52,6 @@ const Page = () => {
             Full-stack Web Developer
           </Box>
           <Box flexShrink={0} mt={{ base: 4, md: 0 }} align="center">
-            <Image
-              style={{ filter: 'opacity(80%) grayscale(60%)' }}
-              top={0}
-              maxWidth="590px"
-              maxHeight="340px"
-              borderColor="linear(to-l, #7928cae8, #ff0080)"
-              borderWidth={2}
-              zIndex={-100}
-              objectFit="cover"
-              display="inline-block"
-              src="/images/2.png"
-              alt="Profile Image"
-            />
           </Box>
         </Box>
 
