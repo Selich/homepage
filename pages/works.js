@@ -14,7 +14,6 @@ const StyledDiv = chakra(motion.div, {
 const items = [{ id: 1 }, { id: 2 }, { id: 3 }]
 const Works = () => {
   const [selectedItem, setSelectedItem] = useState(null);
-  const [user, setUser] = useState(null);
 
 
   useEffect(() => {
@@ -104,9 +103,7 @@ const Section = ({
   children,
   delay = 0
 }) => {
-  useEffect(() => {
-    console.log(selectedItem)
-  }, [selectedItem])
+  useEffect(() => { }, [selectedItem])
   return (
     <StyledDiv
       onClick={() => setSelectedItem(item.id)}
