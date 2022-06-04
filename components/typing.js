@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { render } from "react-dom";
 
 const TYPING_SPEED = 120;
 const DELETING_SPEED = 30;

@@ -1,6 +1,5 @@
 import React from 'react'
 import {
-  useColorModeValue,
   Container,
   Box,
   Text,
@@ -43,7 +42,7 @@ const Blog = ({allPostsData}) => {
           {allPostsData.map(({ id, date, title }, index) => (
         <Box
           borderRadius="lg"
-          bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
+          bg={'whiteAlpha.200'}
           p={2}
           mb={2}
           align="left"
