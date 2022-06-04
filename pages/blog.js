@@ -3,6 +3,7 @@ import React from 'react'
 import Layout from '../components/layouts/article'
 import { Container, Heading } from '@chakra-ui/react'
 import { getSortedPostsData } from '../libs/posts'
+import { Typer } from '../components/typing'
 import Link from "next/link";
 
 
@@ -21,7 +22,16 @@ const Blog = ({allPostsData}) => {
     <Layout>
       <Container>
         <Heading as="h3" fontSize={20} mb={4}>
-          Blog
+      <Typer
+        heading="This"
+        messages={[
+          "is my blg",
+          "is my blog",
+          "are the things I struggled with",
+          "is something I do in my free time",
+          "is something I do IF I have some time",
+        ]}
+      />
         </Heading>
 
         <ul>
