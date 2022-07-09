@@ -16,22 +16,6 @@ const Page = () => {
   return (
     <Layout>
       <Container>
-        <Box
-          borderRadius="lg"
-          bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
-          p={2}
-          mb={2}
-          align="center"
-        >
-          <Text
-            // bgGradient="linear(to-l, #7928CA, #FF0080)"
-            // bgClip="text"
-            fontWeight="extrabold"
-          >
-            Hello, I&apos;m a full-stack developer based in Germany! Helping
-            businesses create a accessibile and scalable websites.
-          </Text>
-        </Box>
 
         <Heading
           bgGradient={useColorModeValue(
@@ -54,6 +38,23 @@ const Page = () => {
           <Box flexShrink={0} mt={{ base: 4, md: 0 }} align="center">
           </Box>
         </Box>
+        <br />
+        <br />
+        <Box
+          borderRadius="lg"
+          bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
+          p={2}
+          mb={2}
+          align="center"
+        >
+          <Text
+            fontWeight="extrabold"
+          >
+            Hello, I&apos;m a full-stack developer based in Germany! Helping
+            businesses create a accessibile and scalable websites.
+          </Text>
+        </Box>
+        <br />
 
         <Section delay={0.1}>
           <Heading
@@ -92,7 +93,30 @@ const Page = () => {
         </Section>
 
         <Section delay={0.2}>
+          <Heading
+            as="h3"
+            variant="section-title"
+            bgGradient="linear(to-l, #7928ca4e, #FF0080)"
+            bgClip="text"
+            fontWeight="extrabold"
+          >
+            Associated with
+          </Heading>
+
+          <Box my={6}>
+            <NextLink href="https://test.twinu.com/home" passHref>
+              <Text>
+                  Twinu
+              </Text>
+            </NextLink>
+            <Paragraph>
+              Twinu is a startup that provides a platform for the exchange of digital assets and NFTs.
+            </Paragraph>
+          </Box>
+
+
         </Section>
+
       </Container>
     </Layout>
   )

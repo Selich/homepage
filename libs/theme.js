@@ -7,7 +7,7 @@ const styles = {
     body: {
       bgGradient:
         mode(
-          "linear(to-l, #7928ca36, #ff008035)",
+          "#000000",
           "#000000",
         )(props)
     }
@@ -19,7 +19,7 @@ const components = {
     variants: {
       'section-title': {
         textDecoration: 'underline',
-        fontSize: 20,
+        fontSize: 18,
         textUnderlineOffset: 6,
         textDecorationColor: '#525252',
         textDecorationThickness: 4,

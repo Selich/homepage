@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Container, Button, Heading, SimpleGrid } from '@chakra-ui/react'
+import { Box, Container, Button, Heading, SimpleGrid } from '@chakra-ui/react'
 // import thumb from '../public/image/works/'
 import Layout from '../components/layouts/article'
 import { motion, AnimatePresence } from 'framer-motion'
@@ -11,7 +11,7 @@ const StyledDiv = chakra(motion.div, {
   }
 })
 
-const items = [{ id: 1 }, { id: 2 }, { id: 3 }]
+const items = []
 const Works = () => {
   const [selectedItem, setSelectedItem] = useState(null);
 
@@ -36,21 +36,21 @@ const Works = () => {
             </Section>
           ))}
         </SimpleGrid>
+      </Container>
         <AnimatePresence>
+    <Box align="left" width="100%">
           {selectedItem && (
-            <SimpleGrid columns={[1, 1, 2]} gap={6}>
               <SectionMain
                 selectedItem={selectedItem}
                 setSelectedItem={setSelectedItem}
                 layoutId={selectedItem.id}
               >
-                <motion.h5>test</motion.h5>
-                <Button onClick={() => setItem(null)} />
+                <motion.h5>lorem ipsum</motion.h5>
+                <motion.p>lorem lorelfasdf asdf asdf asdf asdf asdfrghajgjalsk</motion.p>
               </SectionMain>
-            </SimpleGrid>
           )}
+    </Box>
         </AnimatePresence>
-      </Container>
     </Layout>
   )
 }
@@ -66,29 +66,25 @@ const SectionMain = ({
   useEffect(() => {}, [selectedItem])
   return (
     <StyledDiv
-      onClick={() => setSelectedItem(undefined)}
       initial={{ opacity: 0, y: 10 }}
       animate={{ y: 0, opacity: 1 }}
       pos={'absolute'}
-      width={580}
-      marginRight={'20%'}
       top={0}
       transition={{ duration: 0.2, delay }}
       cursor={'pointer'}
       backdropBlur={10}
-      backgroundColor={'white'}
-      height={400}
+      backgroundColor={'rgba(0,0,0,0.9)'}
+      height="100%"
+      width="100%"
       borderRadius={20}
       boxShadow="0 1rem 1rem rgb(0 0 0 / 20%)"
-      whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.9 }}
     >
       <Container
         style={{
-          backgroundColor: '#7928ca36',
-          height: '310px',
-          borderTopLeftRadius: '10px',
-          borderTopRightRadius: '10px'
+          backgroundColor: 'grey',
+            width:"100%",
+          height: '100%',
         }}
       >
         {children}

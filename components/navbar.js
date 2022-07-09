@@ -8,6 +8,7 @@ import {
   Stack,
   Heading,
   Flex,
+  Icon,
   Menu,
   MenuItem,
   MenuList,
@@ -17,6 +18,9 @@ import {
 } from '@chakra-ui/react'
 
 import { HamburgerIcon } from '@chakra-ui/icons'
+import { AiOutlineTwitter, AiFillLinkedin } from 'react-icons/ai'
+import { BsStackOverflow } from 'react-icons/bs'
+
 // import ThemeToggleButton from  './theme-toggle-button'
 
 const LinkItem = ({ href, path, children }) => {
@@ -28,7 +32,7 @@ const LinkItem = ({ href, path, children }) => {
     <NextLink href={href} passHref>
       <Link
         p={2}
-        bg={active ? '#D072C2' : undefined}
+        bg={active ? 'rgba(221, 148, 222, 0.91)' : undefined}
         color={active ? '#202023' : inactiveColor}
       >
         {children}
@@ -77,12 +81,26 @@ const Navbar = props => {
           <LinkItem href="/blog" path={path}>
             Blog
           </LinkItem>
+          <LinkItem href="https://www.linkedin.com/in/n-selic/" path={path}>
+            <Icon as={AiFillLinkedin} />
+          </LinkItem>
+          <LinkItem href="https://twitter.com/nikola_selic" path={path}>
+            <Icon as={AiOutlineTwitter} />
+          </LinkItem>
+          <LinkItem href="https://stackoverflow.com/users/9184156/nikola-selic" path={path}>
+            <Icon as={BsStackOverflow} />
+          </LinkItem>
         </Stack>
 
         <Box flex={1} align="right">
-          <Box ml={2} display={{base: 'inline-block', md:'none' }}>
+          <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
             <Menu>
-              <MenuButton as={IconButton} icon={<HamburgerIcon/>} variant="outline" aria-label="Option"/>
+              <MenuButton
+                as={IconButton}
+                icon={<HamburgerIcon />}
+                variant="outline"
+                aria-label="Option"
+              />
               <MenuList>
                 <NextLink href="/" passHref>
                   <MenuItem as={Link}>About</MenuItem>
@@ -93,7 +111,6 @@ const Navbar = props => {
                 <NextLink href="/posts" passHref>
                   <MenuItem as={Link}>Posts</MenuItem>
                 </NextLink>
-
               </MenuList>
             </Menu>
           </Box>
