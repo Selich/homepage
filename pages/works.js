@@ -64,7 +64,7 @@ const Works = () => {
 
 // TODO: Add as sticky
 // TODO: Black transparent background
-const SectionMain = ({ selectedItem, setSelectedItem, children, delay = 0 }) => {
+const SectionMain = ({ selectedItem, setSelectedItem, delay = 0 }) => {
   useEffect(() => {}, [selectedItem])
   return (
     <StyledDiv
