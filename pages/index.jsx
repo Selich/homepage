@@ -77,8 +77,10 @@ const Page = () => {
           <Heading
             as="h3"
             variant="section-title"
+            filter="drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.3))"
             bgClip="text"
             fontWeight="extrabold"
+    fontSize="2xl"
             color="white"
           >
             About me
@@ -118,9 +120,11 @@ const Page = () => {
         <Section delay={0.2}>
           <Heading
             as="h3"
+            fontSize="2xl"
             variant="section-title"
             bgClip="text"
             fontWeight="extrabold"
+            filter="drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.3))"
             color="white"
           >
             Associated with

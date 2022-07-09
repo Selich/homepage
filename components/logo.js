@@ -18,17 +18,23 @@ const LogoBox = styled.span`
 `
 
 const Logo = () => {
-  // const footPrintImg = `/images/logo${useColorModeValue('', '-dark')}.png`
 
   return (
     <Link href="/">
       <a>
-        <LogoBox>
-          {/* <Image src={footPrintImg} width={20} height={20} alt="logo" /> */}
+        <LogoBox
+          width="30"
+          height="30"
+          style={{ marginRight: '10px' }}
+          className="logo"
+          onClick={() => {
+            console.log('clicked')
+          }}
+        >
           <Text
             color={useColorModeValue('gray.800', 'whiteAlpha.900')}
             fontFamily="Inter"
-            fontWeight="bold"
+            fontWeight="extrabold"
             ml={3}
           >
             Nikola Selic

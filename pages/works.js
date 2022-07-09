@@ -1,5 +1,12 @@
 import React, { useState, useEffect } from 'react'
-import { Box, Container, Heading, SimpleGrid } from '@chakra-ui/react'
+import {
+  Grid,
+  GridItem,
+  Box,
+  Container,
+  Heading,
+  SimpleGrid
+} from '@chakra-ui/react'
 // import thumb from '../public/image/works/'
 import Layout from '../components/layouts/article'
 import { motion, AnimatePresence } from 'framer-motion'
@@ -11,10 +18,12 @@ const StyledDiv = chakra(motion.div, {
   }
 })
 
-const items = [{id: 1}, {id: 2}, {id: 3}]
+const items = [
+  { id: 1, name: 'Project 1' },
+  { id: 2, name: 'Project 2' }
+]
 const Works = () => {
-  const [selectedItem, setSelectedItem] = useState(null);
-
+  const [selectedItem, setSelectedItem] = useState(null)
 
   useEffect(() => {
     console.log(selectedItem)
@@ -22,9 +31,9 @@ const Works = () => {
   return (
     <Layout>
       <Container maxW="1300px">
-  		  <div className="shape-works"></div>
+        <div className="shape-works"></div>
       </Container>
-      <Container>
+      <Container maxW="800px">
         <Heading as="h3" fontSize={20} mb={4}>
           Works
         </Heading>
@@ -34,36 +43,28 @@ const Works = () => {
               item={item}
               setSelectedItem={setSelectedItem}
               key={item.id}
-            >
-            </Section>
+            ></Section>
           ))}
         </SimpleGrid>
       </Container>
-        <AnimatePresence>
-    <Box align="left" width="100%">
+      <AnimatePresence>
+        <Box align="left" width="100%">
           {selectedItem && (
-              <SectionMain
-                selectedItem={selectedItem}
-                setSelectedItem={setSelectedItem}
-                layoutId={selectedItem.id}
-              >
-                <motion.h5>lorem ipsum</motion.h5>
-                <motion.p>lorem lorelfasdf asdf asdf asdf asdf asdfrghajgjalsk</motion.p>
-              </SectionMain>
+            <SectionMain
+              selectedItem={selectedItem}
+              setSelectedItem={setSelectedItem}
+              layoutId={selectedItem.id}
+            ></SectionMain>
           )}
-    </Box>
-        </AnimatePresence>
+        </Box>
+      </AnimatePresence>
     </Layout>
   )
 }
 
 // TODO: Add as sticky
-// TODO: Black transparent background 
-const SectionMain = ({
-  selectedItem,
-  children,
-  delay = 0
-}) => {
+// TODO: Black transparent background
+const SectionMain = ({ selectedItem, setSelectedItem, children, delay = 0 }) => {
   useEffect(() => {}, [selectedItem])
   return (
     <StyledDiv
@@ -74,21 +75,37 @@ const SectionMain = ({
       transition={{ duration: 0.2, delay }}
       cursor={'pointer'}
       backdropBlur={10}
-      backgroundColor={'rgba(0,0,0,0.9)'}
-      height="100%"
+      backgroundColor={'rgba(0,0,0,0.6)'}
+      minH="800px"
       width="100%"
       borderRadius={20}
       boxShadow="0 1rem 1rem rgb(0 0 0 / 20%)"
       whileTap={{ scale: 0.9 }}
+      onClick={() => setSelectedItem(null)}
     >
-      <Container
-        style={{
-          backgroundColor: 'grey',
-            width:"100%",
-          height: '100%',
-        }}
-      >
-        {children}
+      <Container maxW="1500px">
+        <Grid
+          templateAreas={`"header header"
+                  "nav main"
+                  "nav footer"`}
+          gridTemplateRows={'50px 1fr 30px'}
+          gridTemplateColumns={'550px 1fr'}
+          gap="3"
+          color="white.700"
+          fontWeight="bold"
+          m={4}
+          p={3}
+        >
+          <GridItem pl="2" area={'header'}>
+            <Heading as="h1">Project Name</Heading>
+          </GridItem>
+          <GridItem pl="2" area={'nav'}>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </GridItem>
+          <GridItem pl="2" area={'main'}>
+            Project Screenshot
+          </GridItem>
+        </Grid>
       </Container>
     </StyledDiv>
   )
@@ -100,7 +117,7 @@ const Section = ({
   children,
   delay = 0
 }) => {
-  useEffect(() => { }, [selectedItem])
+  useEffect(() => {}, [selectedItem])
   return (
     <StyledDiv
       onClick={() => setSelectedItem(item.id)}
