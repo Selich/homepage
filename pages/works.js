@@ -11,7 +11,7 @@ const StyledDiv = chakra(motion.div, {
   }
 })
 
-const items = []
+const items = [{id: 1}, {id: 2}, {id: 3}]
 const Works = () => {
   const [selectedItem, setSelectedItem] = useState(null);
 
@@ -21,6 +21,9 @@ const Works = () => {
   }, [selectedItem])
   return (
     <Layout>
+      <Container maxW="1300px">
+  		  <div class="shape-works"></div>
+      </Container>
       <Container>
         <Heading as="h3" fontSize={20} mb={4}>
           Works
@@ -32,7 +35,6 @@ const Works = () => {
               setSelectedItem={setSelectedItem}
               key={item.id}
             >
-              {item.id}
             </Section>
           ))}
         </SimpleGrid>

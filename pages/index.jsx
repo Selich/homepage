@@ -12,23 +12,30 @@ import Section from '../components/section.js'
 import Paragraph from '../components/paragraph.js'
 import Layout from '../components/layouts/article'
 
+
 const Page = () => {
   return (
     <Layout>
-      <Container>
+      <Container maxW="1300px">
+  		  <div class="shape"></div>
+      </Container>
+      <Container maxW='700px'>
 
         <Heading
           bgGradient={useColorModeValue(
-            'radial-gradient(circle, #5c0067 0%, #ff008055 40%, #000 100%);',
-            'linear(to-l, #7928ca, #ff0080)'
+            'linear(to-l, #7928ca, #ff0080)',
+            'linear(to-l, rgba(121,39,202,0.1) , rgba(255,0,128,0.1))'
           )}
           bgClip="text"
           p={0}
-          fontSize="54"
+          fontSize="68"
           fontWeight="extrabold"
+          color="white"
+          textShadow="0px 0px 10px rgba(0, 0, 0, 0.3)"
           as="h1"
           variant="page-title"
         >
+        <br />
           {useColorModeValue('Nikola Selic', 'Nikola Selic')}
         </Heading>
         <Box display={{ md: 'flex' }}>
@@ -46,6 +53,9 @@ const Page = () => {
           p={2}
           mb={2}
           align="center"
+          filter="drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.3))"
+          borderColor="whiteAlpha.200"
+          borderWidth="1px"
         >
           <Text
             fontWeight="extrabold"
@@ -60,9 +70,9 @@ const Page = () => {
           <Heading
             as="h3"
             variant="section-title"
-            bgGradient="linear(to-l, #7928ca4e, #FF0080)"
             bgClip="text"
             fontWeight="extrabold"
+            color="white"
           >
             About me
           </Heading>
@@ -77,13 +87,18 @@ const Page = () => {
             <NextLink href="/works" passHref>
               <Button
                 rightIcon={<ChevronRightIcon />}
-                colorScheme="teal"
+                width="30%"
+                height="40px"
+                filter="drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.2))"
                 bgGradient="linear(to-l, #7928ca7f, #FF0080)"
                 animation="pulse 0.5s ease-in-out infinite alternate"
                 _hover={{
                   bgGradient: 'linear(to-r, red.500, yellow.500)',
                   animationDelay: 2
                 }}
+          borderColor="whiteAlpha.200"
+      borderRadius="10px"
+    fontWeight="extrabold"
                 color="white"
               >
                 My Portfolio
@@ -96,9 +111,9 @@ const Page = () => {
           <Heading
             as="h3"
             variant="section-title"
-            bgGradient="linear(to-l, #7928ca4e, #FF0080)"
             bgClip="text"
             fontWeight="extrabold"
+            color="white"
           >
             Associated with
           </Heading>
