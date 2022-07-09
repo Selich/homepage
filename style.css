@@ -90,10 +90,10 @@ body {
   background-size: 1600% 1600%;
   transform-origin: 50% 50%;
   transform-style: preserve-3d;
-  margin-top: -120px;
-  cursor: pointer; 
+  margin-top: -40px;
   position: absolute;
   z-index: -5;
+  cursor: pointer; 
 
 
   perspective: 1000px;

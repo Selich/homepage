@@ -19,6 +19,17 @@ const Page = () => {
       <Container maxW="1300px">
         <div className="shape"></div>
       </Container>
+      <Container maxW="1400px">
+        <motion.div
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.1, delay: 0 }}
+          drag
+          cursor={'pointer'}
+          backdropBlur={10}
+          whileHover={{ scale: 1.02 }}
+          className="blob2"
+        ></motion.div>
+      </Container>
       <Container maxW="800px">
         <Heading
           bgGradient={useColorModeValue(
@@ -125,18 +136,6 @@ const Page = () => {
             </Paragraph>
           </Box>
         </Section>
-      </Container>
-      <Container maxW="1400px">
-    <motion.div 
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.1, delay: 0 }}
-      drag
-      cursor={'pointer'}
-      backdropBlur={10}
-      className="blob2"
-      whileHover={{ scale: 1.02 }}
-
-    ></motion.div>
       </Container>
     </Layout>
   )
