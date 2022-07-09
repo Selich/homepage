@@ -7,18 +7,17 @@ import {
   Heading
 } from '@chakra-ui/react'
 import NextLink from 'next/link'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import Section from '../components/section.js'
 import Paragraph from '../components/paragraph.js'
 import Layout from '../components/layouts/article'
-import CallToActionButton from '../components/callToActionButton'
 
 const Page = () => {
   return (
     <Layout>
       <Container maxW="1300px">
-        <div class="shape"></div>
+        <div className="shape"></div>
       </Container>
       <Container maxW="800px">
         <Heading

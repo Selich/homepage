@@ -1,12 +1,6 @@
 import {
-  useColorModeValue,
   Button,
-  Container,
-  Box,
-  Text,
-  Heading
 } from '@chakra-ui/react'
-import NextLink from 'next/link'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 
 const CallToActionButton = () => (

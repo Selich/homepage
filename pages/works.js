@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Box, Container, Button, Heading, SimpleGrid } from '@chakra-ui/react'
+import { Box, Container, Heading, SimpleGrid } from '@chakra-ui/react'
 // import thumb from '../public/image/works/'
 import Layout from '../components/layouts/article'
 import { motion, AnimatePresence } from 'framer-motion'
@@ -22,7 +22,7 @@ const Works = () => {
   return (
     <Layout>
       <Container maxW="1300px">
-  		  <div class="shape-works"></div>
+  		  <div className="shape-works"></div>
       </Container>
       <Container>
         <Heading as="h3" fontSize={20} mb={4}>
@@ -61,7 +61,6 @@ const Works = () => {
 // TODO: Black transparent background 
 const SectionMain = ({
   selectedItem,
-  setSelectedItem,
   children,
   delay = 0
 }) => {
