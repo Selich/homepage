@@ -5,7 +5,7 @@ const Paragraph = styled.p`
   text-indent: 1em;
   line-height: 1.5;
   font-size: 1.2rem;
-  font-weight: 400;
+  font-weight: 500;
   text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
 
 

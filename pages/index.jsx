@@ -7,20 +7,20 @@ import {
   Heading
 } from '@chakra-ui/react'
 import NextLink from 'next/link'
+import { motion, AnimatePresence } from 'framer-motion'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import Section from '../components/section.js'
 import Paragraph from '../components/paragraph.js'
 import Layout from '../components/layouts/article'
-
+import CallToActionButton from '../components/callToActionButton'
 
 const Page = () => {
   return (
     <Layout>
       <Container maxW="1300px">
-  		  <div class="shape"></div>
+        <div class="shape"></div>
       </Container>
-      <Container maxW='700px'>
-
+      <Container maxW="800px">
         <Heading
           bgGradient={useColorModeValue(
             'linear(to-l, #7928ca, #ff0080)',
@@ -35,15 +35,14 @@ const Page = () => {
           as="h1"
           variant="page-title"
         >
-        <br />
+          <br />
           {useColorModeValue('Nikola Selic', 'Nikola Selic')}
         </Heading>
         <Box display={{ md: 'flex' }}>
           <Box flexGrow={1} fontSize="2xl">
             Full-stack Web Developer
           </Box>
-          <Box flexShrink={0} mt={{ base: 4, md: 0 }} align="center">
-          </Box>
+          <Box flexShrink={0} mt={{ base: 4, md: 0 }} align="center"></Box>
         </Box>
         <br />
         <br />
@@ -57,9 +56,7 @@ const Page = () => {
           borderColor="whiteAlpha.200"
           borderWidth="1px"
         >
-          <Text
-            fontWeight="extrabold"
-          >
+          <Text fontWeight="extrabold">
             Hello, I&apos;m a full-stack developer based in Germany! Helping
             businesses create a accessibile and scalable websites.
           </Text>
@@ -89,16 +86,17 @@ const Page = () => {
                 rightIcon={<ChevronRightIcon />}
                 width="30%"
                 height="40px"
-                filter="drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.2))"
+                filter="drop-shadow(0px 5px 6px rgba(0, 0, 0, 0.3))"
                 bgGradient="linear(to-l, #7928ca7f, #FF0080)"
                 animation="pulse 0.5s ease-in-out infinite alternate"
                 _hover={{
-                  bgGradient: 'linear(to-r, red.500, yellow.500)',
-                  animationDelay: 2
+                  bgGradient: 'linear(to-l, #7928ca7f, #FF0080)',
+                  filter: 'drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.1))',
+                  animation: 'pulse 0.5s ease-in-out infinite alternate'
                 }}
-          borderColor="whiteAlpha.200"
-      borderRadius="10px"
-    fontWeight="extrabold"
+                borderColor="whiteAlpha.200"
+                borderRadius="10px"
+                fontWeight="extrabold"
                 color="white"
               >
                 My Portfolio
@@ -120,18 +118,26 @@ const Page = () => {
 
           <Box my={6}>
             <NextLink href="https://test.twinu.com/home" passHref>
-              <Text>
-                  Twinu
-              </Text>
+              <Text>Twinu</Text>
             </NextLink>
             <Paragraph>
-              Twinu is a startup that provides a platform for the exchange of digital assets and NFTs.
+              Twinu is a startup that provides a platform for the exchange of
+              digital assets and NFTs.
             </Paragraph>
           </Box>
-
-
         </Section>
+      </Container>
+      <Container maxW="1400px">
+    <motion.div 
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.1, delay: 0 }}
+      drag
+      cursor={'pointer'}
+      backdropBlur={10}
+      className="blob2"
+      whileHover={{ scale: 1.02 }}
 
+    ></motion.div>
       </Container>
     </Layout>
   )
