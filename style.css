@@ -164,3 +164,25 @@ body {
 }
   }
 
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+}
+.nav-link:after {    
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 1px;
+  left: 0%;
+  position: absolute;
+  background: #fff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+.nav-link:hover:after { 
+  width: 100%; 
+  left: 0; 
+}

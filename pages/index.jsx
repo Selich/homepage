@@ -12,6 +12,7 @@ import { ChevronRightIcon } from '@chakra-ui/icons'
 import Section from '../components/section.js'
 import Paragraph from '../components/paragraph.js'
 import Layout from '../components/layouts/article'
+import Experience from '../components/experience.js'
 
 const Page = () => {
   return (
@@ -80,7 +81,7 @@ const Page = () => {
             filter="drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.3))"
             bgClip="text"
             fontWeight="extrabold"
-    fontSize="2xl"
+            fontSize="2xl"
             color="white"
           >
             About me
@@ -92,7 +93,7 @@ const Page = () => {
             mostly interested in the allocation of Multi-machine parallelism in
             large-scale model processing.
           </Paragraph>
-          <Box align="center" my={4}>
+          <Box align="center" my={4} >
             <NextLink href="/works" passHref>
               <Button
                 rightIcon={<ChevronRightIcon />}
@@ -129,16 +130,8 @@ const Page = () => {
           >
             Associated with
           </Heading>
+          <Experience/>
 
-          <Box my={6}>
-            <NextLink href="https://test.twinu.com/home" passHref>
-              <Text>Twinu</Text>
-            </NextLink>
-            <Paragraph>
-              Twinu is a startup that provides a platform for the exchange of
-              digital assets and NFTs.
-            </Paragraph>
-          </Box>
         </Section>
       </Container>
     </Layout>
