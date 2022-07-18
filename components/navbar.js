@@ -73,10 +73,10 @@ const Navbar = props => {
           mt={{ base: 4, nmd: 0 }}
         >
           <LinkItem href="/works" path={path}>
-            <Logo text={"Works"} href="/works"/>
+            Works
           </LinkItem>
           <LinkItem href="/blog" path={path}>
-            <Logo text={"Blog"} href="/blog"/>
+            Blog
           </LinkItem>
           <LinkItem href="https://www.linkedin.com/in/n-selic/">
             <Icon as={AiFillLinkedin} />
@@ -99,14 +99,11 @@ const Navbar = props => {
                 aria-label="Option"
               />
               <MenuList>
-                <NextLink href="/" passHref>
-                  <MenuItem as={Link}>About</MenuItem>
-                </NextLink>
                 <NextLink href="/works" passHref>
                   <MenuItem as={Link}>Works</MenuItem>
                 </NextLink>
-                <NextLink href="/posts" passHref>
-                  <MenuItem as={Link}>Posts</MenuItem>
+                <NextLink href="/blog" passHref>
+                  <MenuItem as={Link}>Blog</MenuItem>
                 </NextLink>
               </MenuList>
             </Menu>
