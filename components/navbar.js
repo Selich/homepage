@@ -6,7 +6,6 @@ import {
   Box,
   Link,
   Stack,
-  Heading,
   Flex,
   Icon,
   Menu,
@@ -62,10 +61,8 @@ const Navbar = props => {
         align="center"
         justify="space-between"
       >
-        <Flex align="center" mr={5}>
-          <Heading as="h1" size="lg" letterSpacing={'tighter'}>
-            <Logo />
-          </Heading>
+        <Flex align="center" >
+            <Logo text={"Nikola Selic"} href={'/'}/>
         </Flex>
         <Stack
           direction={{ base: 'column', md: 'row' }}
@@ -76,10 +73,10 @@ const Navbar = props => {
           mt={{ base: 4, nmd: 0 }}
         >
           <LinkItem href="/works" path={path}>
-            Works
+            <Logo text={"Works"} href="/works"/>
           </LinkItem>
           <LinkItem href="/blog" path={path}>
-            Blog
+            <Logo text={"Blog"} href="/blog"/>
           </LinkItem>
           <LinkItem href="https://www.linkedin.com/in/n-selic/" path={path}>
             <Icon as={AiFillLinkedin} />

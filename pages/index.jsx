@@ -38,7 +38,7 @@ const Page = () => {
             'linear(to-l, rgba(121,39,202,0.1) , rgba(255,0,128,0.1))'
           )}
           bgClip="text"
-          p={0}
+          pt={50}
           fontSize="68"
           fontWeight="extrabold"
           color="white"
@@ -46,7 +46,6 @@ const Page = () => {
           as="h1"
           variant="page-title"
         >
-          <br />
           {useColorModeValue('Nikola Selic', 'Nikola Selic')}
         </Heading>
         <Box display={{ md: 'flex' }}>

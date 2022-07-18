@@ -17,25 +17,22 @@ const LogoBox = styled.span`
   }
 `
 
-const Logo = () => {
+const Logo = ({text, href}) => {
   return (
-    <Link href="/">
+    <Link href={href}>
     <a
             className="nav-link"
     >
         <LogoBox
-          width="30"
-          height="30"
+          width="20"
+          height="20"
           style={{ marginRight: '10px' }}
-          onClick={() => {
-            console.log('clicked')
-          }}
         >
           <Text
             color={useColorModeValue('gray.800', 'whiteAlpha.900')}
             ml={3}
           >
-            Nikola Selic
+            {text}
           </Text>
         </LogoBox>
       </a>

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import {
   Grid,
+  useColorModeValue,
   GridItem,
   Box,
   Container,
@@ -34,8 +35,22 @@ const Works = () => {
         <div className="shape-works"></div>
       </Container>
       <Container maxW="800px">
-        <Heading as="h3" fontSize={20} mb={4}>
-          Works
+        <Heading
+          bgGradient={useColorModeValue(
+            'linear(to-l, #7928ca, #ff0080)',
+            'linear(to-l, rgba(121,39,202,0.1) , rgba(255,0,128,0.1))'
+          )}
+          bgClip="text"
+          pt={50}
+          pb={20}
+          fontSize="68"
+          fontWeight="extrabold"
+          color="white"
+          textShadow="0px 0px 10px rgba(0, 0, 0, 0.3)"
+          as="h1"
+          variant="page-title"
+        >
+          {useColorModeValue('Works', 'Works')}
         </Heading>
         <SimpleGrid columns={[1, 1, 2]} gap={6}>
           {items.map(item => (

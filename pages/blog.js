@@ -2,6 +2,7 @@ import React from 'react'
 import {
   Container,
   Box,
+  useColorModeValue,
   Text,
   Heading
 } from '@chakra-ui/react'
@@ -25,16 +26,30 @@ export async function getStaticProps() {
 const Blog = ({allPostsData}) => {
   return (
     <Layout>
-      <Container>
-        <Heading as="h3" fontSize={20} mb={4}>
+      <Container maxW="300px">
+        <div className="shape"></div>
+      </Container>
+      <Container maxW="800px">
+        <Heading
+          bgGradient={useColorModeValue(
+            'linear(to-l, #7928ca, #ff0080)',
+            'linear(to-l, rgba(121,39,202,0.1) , rgba(255,0,128,0.1))'
+          )}
+          bgClip="text"
+          pt={50}
+          pb={20}
+          fontSize="68"
+          fontWeight="extrabold"
+          color="white"
+          textShadow="0px 0px 10px rgba(0, 0, 0, 0.3)"
+          as="h1"
+          variant="page-title"
+        >
       <Typer
         heading="This"
         messages={[
           "is my blg",
           "is my blog",
-          "are the things I struggled with",
-          "is something I do in my free time",
-          "is something I do IF I have some time",
         ]}
       />
         </Heading>
