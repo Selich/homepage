@@ -61,8 +61,8 @@ const Navbar = props => {
         align="center"
         justify="space-between"
       >
-        <Flex align="center" >
-            <Logo text={"Nikola Selic"} href={'/'}/>
+        <Flex align="center">
+          <Logo text={'Nikola Selic'} href={'/'} />
         </Flex>
         <Stack
           direction={{ base: 'column', md: 'row' }}
@@ -79,13 +79,19 @@ const Navbar = props => {
             Blog
           </LinkItem>
           <LinkItem href="https://www.linkedin.com/in/n-selic/">
-            <Icon as={AiFillLinkedin} />
+            <Flex align="center">
+              <Icon w={6} h={6} as={AiFillLinkedin} />
+            </Flex>
           </LinkItem>
           <LinkItem href="https://twitter.com/nikola_selic">
-            <Icon as={AiOutlineTwitter} />
+            <Flex align="center">
+              <Icon w={6} h={6} as={AiOutlineTwitter} />
+            </Flex>
           </LinkItem>
           <LinkItem href="https://stackoverflow.com/users/9184156/nikola-selic">
-            <Icon as={BsStackOverflow} />
+            <Flex align="center">
+              <Icon w={6} h={6} as={BsStackOverflow} />
+            </Flex>
           </LinkItem>
         </Stack>
 
