@@ -5,7 +5,7 @@ const Experience = () => {
   return data.map((item, index) => (
     <Box my={6} key={index}>
       <NextLink href={item.url} passHref>
-        <Text fontSize='3xl'>{item.organization}</Text>
+        <Text cursor={"pointer"} fontSize='3xl'>{item.organization}</Text>
       </NextLink>
       <Text fontSize='2xl'>Job Title: {item.jobTitle}</Text>
       <Text fontSize='2xl'>Location: {item.location}</Text>
