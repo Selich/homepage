@@ -19,10 +19,6 @@ const StyledDiv = chakra(motion.div, {
   }
 })
 
-const items = [
-  { id: 1, name: 'Project 1' },
-  { id: 2, name: 'Project 2' }
-]
 const Works = () => {
   const [selectedItem, setSelectedItem] = useState(null)
 
@@ -53,7 +49,7 @@ const Works = () => {
           {useColorModeValue('Works', 'Works')}
         </Heading>
         <SimpleGrid columns={[1, 1, 2]} gap={6}>
-          {items.map(item => (
+          {data.map(item => (
             <Section
               item={item}
               setSelectedItem={setSelectedItem}
@@ -112,7 +108,7 @@ const SectionMain = ({ selectedItem, setSelectedItem, delay = 0 }) => {
           p={3}
         >
           <GridItem pl="2" area={'header'}>
-            <Heading as="h1">Project Name</Heading>
+            <Heading as="h1">{selectedItem.name}</Heading>
           </GridItem>
           <GridItem pl="2" area={'nav'}>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -162,5 +158,20 @@ const Section = ({
     </StyledDiv>
   )
 }
+
+const data = [
+  {
+    "id": 1,
+    "name": "Project 1",
+    "description": "Test",
+    "image": "https://via.placeholder.com/300x200",
+  },
+  {
+    "id": 2,
+    "name": "Project 2",
+    "description": "Test",
+    "image": "https://via.placeholder.com/300x200",
+  },
+]
 
 export default Works

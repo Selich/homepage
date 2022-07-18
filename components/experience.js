@@ -33,19 +33,19 @@ const data = [
             "Write server side code in Typescript using Nest.js."
         ]
     },
-    {
-        "url": "https://www.kitro.ch/",
-        "jobTitle": "Sofware Developer",
-        "organization": "KITRO",
-        "location": "Zurich, Switzerland",
-        "date": "Jan. 2021 - Sep. 2021",
-        "description": [
-            "Full-stack developer in a smart waste management startup.",
-            "Involved in creation of an ETL pipeline for the training of a computer vision model.",
-            "Developed an app that creates an WiFi access point and connects smart weighing devices to the users mobile devices.",
-            "Created microservices that were deployed on AWS."
-        ]
-    },
+    // {
+    //     "url": "https://www.kitro.ch/",
+    //     "jobTitle": "Sofware Developer",
+    //     "organization": "KITRO",
+    //     "location": "Zurich, Switzerland",
+    //     "date": "Jan. 2021 - Sep. 2021",
+    //     "description": [
+    //         "Full-stack developer in a smart waste management startup.",
+    //         "Involved in creation of an ETL pipeline for the training of a computer vision model.",
+    //         "Developed an app that creates an WiFi access point and connects smart weighing devices to the users mobile devices.",
+    //         "Created microservices that were deployed on AWS."
+    //     ]
+    // },
     {
         "url": "https://www.lambdaworks.io/",
         "jobTitle": "Haskell Developer Intern",
