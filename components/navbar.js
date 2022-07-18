@@ -78,13 +78,13 @@ const Navbar = props => {
           <LinkItem href="/blog" path={path}>
             <Logo text={"Blog"} href="/blog"/>
           </LinkItem>
-          <LinkItem href="https://www.linkedin.com/in/n-selic/" path={path}>
+          <LinkItem href="https://www.linkedin.com/in/n-selic/">
             <Icon as={AiFillLinkedin} />
           </LinkItem>
-          <LinkItem href="https://twitter.com/nikola_selic" path={path}>
+          <LinkItem href="https://twitter.com/nikola_selic">
             <Icon as={AiOutlineTwitter} />
           </LinkItem>
-          <LinkItem href="https://stackoverflow.com/users/9184156/nikola-selic" path={path}>
+          <LinkItem href="https://stackoverflow.com/users/9184156/nikola-selic">
             <Icon as={BsStackOverflow} />
           </LinkItem>
         </Stack>
